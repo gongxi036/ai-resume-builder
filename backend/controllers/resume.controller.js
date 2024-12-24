@@ -38,7 +38,7 @@ export const getAllResumes = async (req, res) => {
 export const getResumeDetail = async (req, res) => {
   const resumeId = req.query.id
   const resume = await Resume.findById(resumeId)
-  console.log(resume)
+  // console.log(resume)
   if (!resume) return res.status(404).json({ error: 'Not Found resume'})
   res.status(200).json(resume)
 }
